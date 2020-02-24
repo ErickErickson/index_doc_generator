@@ -142,7 +142,7 @@ class IndexingThread implements Runnable {
 
   final int id;
   final int numDocs;
-  final static Random rand = new Random();
+  final static Random rand = new Random(1_000_000); // get identical docs for successive runs
 
   IndexingThread(int id, int numDocs) throws IOException {
     this.id = id;
